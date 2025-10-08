@@ -1,232 +1,184 @@
-
-/* this is fir the general style */
-body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    margin: 0;
-    background-color:#f5f5f5;
-    color: #1d2758;
-    text-align: center;
-    
+  body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #048383;
+  color: #333;
 }
 
-
-/* Styling for the student form */
-
-
-.page-titles{
-    color: #003366;
-    margin-bottom: 15px;
-    animation: fadeIn 3s ease-in;
-}
-   /* Form styling */
-/* form{
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 10px;
-    max-width: 600px;
-    margin: 0 auto ;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-
-} */
-.form-stud{
-    background-color: #ffffff;
-    border-radius: 5px;
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    animation: fadeIn 3s ease-in;
-
+header {
+  background: linear-gradient(135deg, #0f9b8e, #3a7bd5);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  border-bottom: 4px solid #0c7b74;
 }
 
-.row-form{
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    text-align: left;
+h1 {
+  margin: 0;
+  font-size: 2rem;
 }
 
-.row-form label{
-    width: 180px;
-    margin-right: 15px;
-    font-weight: bolder;
-    color: #1d2758;
+.form-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: rgb(228, 239, 221);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    box-sizing: border-box;
+.form-group {
+  margin-bottom: 1.2rem;
 }
 
-input:focus,
-textarea:focus {
-    border-color: #f6b11f;
-    outline: none;
-    box-shadow: 0 0 5px rgba(246, 177, 31, 0.5);
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
 }
 
-button[type="submit"] {
-    display: block;
-    margin: 20px auto;
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
-    background-color: #F6B11F;
-    color: #003366;
-    border-radius: 5px;
-    cursor: all-scroll;
-    transition: background-color 0.3s ease;
-}
-button[type="submit"]:hover {
-    background-color: #D9272D;
-    color: white;
-}
-button:focus {
-    outline: 5px solid #ffcc00;
+input, select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #eaf0ee;
+  border-radius: 8px;
+  font-size: 1rem;
 }
 
-#live {
-    font-weight: bold;
-    margin-top: 10px;
-    color: green;
+input:focus, select:focus {
+  border-color: #0f9b8e;
+  outline: none;
 }
+
+button {
+  background: #0f9b8e;
+  color: rgb(160, 19, 19);
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.search-section {
+  max-width: 600px;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+#searchInput {
+  width: 80%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.edit-btn {
+  margin-right: 0.4rem;
+  background: #f0ad4e;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background: #ec971f;
+}
+
+button:hover {
+  background: #0c7b74;
+}
+
 .error {
-    color: red;
-    font-size: 0.9em;
+  color: crimson;
+  font-size: 0.85rem;
 }
 
-/* Table styling */
-
-.table-title {
-    color: #003366;
-    margin-top: 30px;
-    animation: fadeIn 3s ease-in;
+.cards-section {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1rem;
 }
 
-.table-info {
-    border-collapse: collapse;
-    width: 90%;
-    margin: 20px auto;
-    background-color: #ffffff;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    animation: fadeIn 3s ease-in;
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
 }
 
-.table-info th {
-    background-color: #F6B11F;
-    color: white;
-    padding: 15px;
-    
+.card {
+  background: #e9e7ef;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
 }
 
-.table-info th, .table-info td {
-    border: 1px solid #D9272D;
-    padding: 8px;
-    text-align: right;
-    color: #1d2758;
+.card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.8rem;
 }
 
-.table-info tbody tr:hover {
-    background-color: #f0f0f0;
-    transition: background-color 0.3s ease;
+.card h3 {
+  margin: 0.4rem 0;
+  color: #0f9b8e;
 }
 
-
-/* Styling for cards*/
-.card-title {
-    color: #003366;
-    margin-top: 40px;
-    animation: fadeIn 2s ease-in;
+.card p {
+  margin: 0.2rem 0;
 }
 
-.container-card {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 15px;
-    justify-content: center;
-    margin-top: 20px;
+.remove-btn {
+  margin-top: 0.6rem;
+  background: crimson;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.profile-card {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    text-align: center;
-    animation: fadeIn 0.2s ease-in;
-    transition: transform 0.2s ease;
+.remove-btn:hover {
+  background: darkred;
 }
 
-.profile-card:hover {
-    transform: scale(1.02);
+.table-section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
 }
 
-.profile-card img {
-    border-radius: 50%;
-    margin-bottom: 15px;
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.profile-card h3 {
-    margin: 10px 0 5px 0;
-    font-size: 1.1em;
+thead {
+  background: #0f9b8e;
+  color: white;
 }
 
-.profile-card p {
-    margin: 3px 0;
-    font-size: 0.9em;
+th, td {
+  padding: 0.8rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
 }
 
-.profile-card .remove-btn {
-    margin-top: 10px;
-    background-color: #cc0000;
-    color: white;
-    width: 100%;
-    border:dotted yellow;
-    padding: 8px;
-    border-radius: 5px;
-    cursor:grab;
+tr:nth-child(even) {
+  background: #f9fbf9;
 }
 
-.profile-card .remove-btn:hover {
-    background-color: #990000;
-}
-
-/* Styling for screen sizes  */
-@media (max-width: 768px) {
-    .container-card {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-}
-
-@media (max-width: 480px) {
-    .container-card {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    }
-
-    .profile-card img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .profile-card {
-        padding: 10px;
-        font-size: 0.9em;
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+tr:hover {
+  background: #dde9e0;
 }
