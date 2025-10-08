@@ -1,94 +1,99 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab4</title>
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <title>Student Registration System</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="page-titles">Welcome to NUST Profile</h1>
+  <header>
+    <h1>Student Registration Portal</h1>
+    <p>Matias WEBSITE</p>
+  </header>
+ 
+  <section class="form-section">
+    <form id="registrationForm" novalidate>
+      <div class="form-group">
+        <label for="firstName">First Name *</label>
+        <input type="text" id="firstName" required>
+        <small class="error"></small>
+      </div>
 
-    <!-- Form that student have to fill in -->
-   
-    <form id="regForm" class="form-stud" novalidate>
+      <div class="form-group">
+        <label for="lastName">Last Name *</label>
+        <input type="text" id="lastName" required>
+        <small class="error"></small>
+      </div>
 
-        <div class="row-form">
-        <label for="firstName">First Name: <span aria-hidden="true">*</span></label>
-        <input type="text" id="firstName" name="firstName" required/>
-        <small class="error" id="err-first"></small><br>
-    </div>
-        
-    <div class="row-form">
-        <label for="lastName">Last Name: <span aria-hidden="true">*</span></label>
-        <input type="text" id="lastName" name="lastName" required/>
-        <small class="error" id="err-last"></small><br>
-    </div>
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" required>
+        <small class="error"></small>
+      </div>
 
-    <div class="row-form">
-        <label for="email">Email: <span aria-hidden="true">*</span></label>
-        <input type="email" id="email" name="email" required/>
-        <small class="error" id="err-email"></small><br>
-    </div>    
+      <div class="form-group">
+        <label for="programme">Programme *</label>
+        <select id="programme" required>
+          <option value="">-- Select Programme --</option>
+          <option value="Communication">Communication</option>
+          <option value="Networking">Networking</option>
+          <option value="Software">Software</option>
+        </select>
+        <small class="error"></small>
+      </div>
 
-    <div class="row-form">
-        <label for="prg">Programme: </label>
-        <textarea id="prg" name="prg"></textarea>
-    </div>
-        
-    <div class="row-form">
-        <fieldset>
-        <legend>Year of Study: <span aria-hidden="true">*</span></legend>
-        <label><input type="radio" name="year" value="1" required/> 1</label>
-        <label><input type="radio" name="year" value="2"/> 2</label>
-        <label><input type="radio" name="year" value="3"/> 3</label>
-        </fieldset>
-    </div>    
+      <div class="form-group">
+        <label for="year">Year *</label>
+        <select id="year" required>
+          <option value="">-- Select Year --</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <small class="error"></small>
+      </div>
 
-    <div class="row-form">
-        <label for="interests">Interests: </label>
-        <textarea id="interests" name="interests"></textarea><br>
-    </div>    
+      <div class="form-group">
+        <label for="interests">Interests</label>
+        <input type="text" id="interests" placeholder="e.g. games, Web Dev, movies">
+      </div>
 
-    <div class="row-form">
-        <label for="photo">Photo URL: </label>
-        <input type="url" id="photo" name="photo" required/>
-    </div>
+      <div class="form-group">
+        <label for="photo">Photo URL</label>
+        <input type="url" id="photo" placeholder="http://example.com/photo.jpg">
+      </div>
 
-        <div aria-live="polite" class="sr" id="live"></div>
-        <button type="submit">Add Student</button>
-        </form>
+      <button type="submit">Add Student</button>
+      <div id="feedback" aria-live="polite"></div>
+    </form>
+  </section>
 
+  <section class="search-section">
+    <h2>Search Students</h2>
+    <input type="text" id="searchInput" placeholder="Search by name, email, or programme...">
+  </section>
 
-        <!-- Information from the students will be shown here -->
+  <section class="cards-section">
+    <h2>Profile Cards</h2>
+    <div id="profileCards" class="cards-container"></div>
+  </section>
 
-        <!-- Addition, style option -->
-        <h2>Search Students</h2>
-<input type="text" id="searchInput" placeholder="Search by name, email, or programme" />
-
-        <h2 class="card-title">Profile Cards</h2>
-          <div id="profileCardsContainer" class="container-card"></div>
-
-        <h2 class="table-title">Student Information</h2>
-           
-    <table id="summaryTable" class="table-info" border="5">
-        <thead>
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Programme</th>
-                <th>Year</th>
-                <th>Interests</th>
-                <th>Photo URL</th>
-                <th>Add/Remove</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
+  <section class="table-section">
+    <h2>Registered Students</h2>
+    <table id="summaryTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Programme</th>
+          <th>Year</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
     </table>
-        
-        
-        <script src="script.js"></script> 
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
